@@ -1,0 +1,30 @@
+From e91b691ba2e9a83d8cc94f42bdc41c9a7350c790 Mon Sep 17 00:00:00 2001
+From: Matthew Miner <matthew@matthewminer.com>
+Date: Fri, 7 Mar 2014 15:46:19 -0500
+Subject: [PATCH] Add trove classifiers specifying Python 3 support.
+
+---
+ setup.py | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index c384a76..56612d0 100755
+--- a/setup.py
++++ b/setup.py
+@@ -35,7 +35,12 @@ setup(name='extras',
+         'in the standard library'),
+       long_description=get_long_description(),
+       version=get_version(),
+-      classifiers=["License :: OSI Approved :: MIT License"],
++      classifiers=[
++        "Intended Audience :: Developers",
++        "License :: OSI Approved :: MIT License",
++        "Programming Language :: Python",
++        "Programming Language :: Python :: 3",
++        ],
+       packages=[
+         'extras',
+         'extras.tests',
+-- 
+1.9.3
+
