@@ -4,7 +4,7 @@
 #
 Name     : extras
 Version  : 0.0.3
-Release  : 17
+Release  : 18
 URL      : https://pypi.python.org/packages/source/e/extras/extras-0.0.3.tar.gz
 Source0  : https://pypi.python.org/packages/source/e/extras/extras-0.0.3.tar.gz
 Summary  : Useful extra bits for Python - things that shold be in the standard library
@@ -16,6 +16,8 @@ BuildRequires : pip
 BuildRequires : python-dev
 BuildRequires : python3-dev
 BuildRequires : setuptools
+BuildRequires : six
+BuildRequires : six-python
 BuildRequires : testtools
 BuildRequires : testtools-python
 Patch1: 0001-Add-trove-classifiers-specifying-Python-3-support.patch
@@ -47,12 +49,12 @@ python3 setup.py build -b py3
 %check
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 pushd py2 ; py.test-2.7 ; popd
 %install
 rm -rf %{buildroot}
-python2 setup.py build -b py2 install --root=%{buildroot}
-python3 setup.py build -b py3 install --root=%{buildroot}
+python2 -tt setup.py build -b py2 install --root=%{buildroot}
+python3 -tt setup.py build -b py3 install --root=%{buildroot}
 
 %files
 %defattr(-,root,root,-)
