@@ -1,5 +1,5 @@
 PKG_NAME := extras
-URL := https://pypi.python.org/packages/source/e/extras/extras-0.0.3.tar.gz
+URL := http://pypi.debian.net/extras/extras-1.0.0.tar.gz
 ARCHIVES :=
 
 include ../common/Makefile.common
