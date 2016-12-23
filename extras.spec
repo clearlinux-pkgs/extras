@@ -4,7 +4,7 @@
 #
 Name     : extras
 Version  : 1.0.0
-Release  : 23
+Release  : 24
 URL      : http://pypi.debian.net/extras/extras-1.0.0.tar.gz
 Source0  : http://pypi.debian.net/extras/extras-1.0.0.tar.gz
 Summary  : Useful extra bits for Python - things that shold be in the standard library
