@@ -6,7 +6,7 @@
 #
 Name     : extras
 Version  : 1.0.0
-Release  : 39
+Release  : 40
 URL      : http://pypi.debian.net/extras/extras-1.0.0.tar.gz
 Source0  : http://pypi.debian.net/extras/extras-1.0.0.tar.gz
 Source99 : http://pypi.debian.net/extras/extras-1.0.0.tar.gz.asc
