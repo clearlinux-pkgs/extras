@@ -6,7 +6,7 @@
 #
 Name     : extras
 Version  : 1.0.0
-Release  : 50
+Release  : 51
 URL      : http://pypi.debian.net/extras/extras-1.0.0.tar.gz
 Source0  : http://pypi.debian.net/extras/extras-1.0.0.tar.gz
 Source1  : http://pypi.debian.net/extras/extras-1.0.0.tar.gz.asc
@@ -19,63 +19,16 @@ Requires: extras-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
 
 %description
-======
 extras
-======
-
-extras is a set of extensions to the Python standard library, originally
-written to make the code within testtools cleaner, but now split out for
-general use outside of a testing context.
-
-
-Documentation
--------------
-
-pydoc extras is your friend. extras currently contains the following functions:
-
-* try_import
-
-* try_imports
-
-* safe_hasattr
-
-Which do what their name suggests.
-
-
-Licensing
----------
-
-This project is distributed under the MIT license and copyright is owned by
-the extras authors. See LICENSE for details.
-
-
-Required Dependencies
----------------------
-
- * Python 2.6+ or 3.0+
-
-
-Bug reports and patches
------------------------
-
-Please report bugs using github issues at <https://github.com/testing-cabal/extras>.
-Patches can also be submitted via github.  You can mail the authors directly
-via the mailing list testtools-dev@lists.launchpad.net. (Note that Launchpad
-discards email from unknown addresses - be sure to sign up for a Launchpad
-account before mailing the list, or your mail will be silently discarded).
-
-
-History
--------
-
-extras used to be testtools.helpers, and was factored out when folk wanted to
-use it separately.
-
-
-Thanks
-------
-
- * Martin Pool
+        ======
+        
+        extras is a set of extensions to the Python standard library, originally
+        written to make the code within testtools cleaner, but now split out for
+        general use outside of a testing context.
+        
+        
+        Documentation
+        -------------
 
 %package license
 Summary: license components for the extras package.
@@ -113,12 +66,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1582922327
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1603391867
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
-export FCFLAGS="$CFLAGS -fno-lto "
-export FFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$FFLAGS -fno-lto "
+export FFLAGS="$FFLAGS -fno-lto "
 export CXXFLAGS="$CXXFLAGS -fno-lto "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build

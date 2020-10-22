@@ -1,6 +1,5 @@
 # This file contains recursive sources that require this package
 fasteners
-keystone
 python-subunit
 requests-mock
 subunit
